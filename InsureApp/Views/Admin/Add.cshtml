@@ -1,0 +1,47 @@
+﻿@using System.Threading.Tasks
+@using InsureApp.Models
+@model InsureApp.Models.MusteriAddViewModel
+
+@{
+    ViewBag.Title = "Müşteri Ekleme";
+    Layout = "~/Views/_AdminLayout.cshtml";
+}
+
+<h2>Yeni bir müşteri ekle</h2>
+
+<form asp-controller="Admin" asp-action="Add" method="post">
+     <div class="form-group">
+        <label asp-for="Musteri.Tc_No">Tc No :</label>
+        <input asp-for="Musteri.Tc_No" class="form-control" placeholder="Tc No:" />
+        <span asp-validation-for="Musteri.Tc_No"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Musteri.Isim">İsim :</label>
+        <input asp-for="Musteri.Isim" class="form-control" placeholder="Adı" />
+        <span asp-validation-for="Musteri.Isim"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Musteri.Soyisim">Soyisim :</label>
+        <input asp-for="Musteri.Soyisim" class="form-control" placeholder="Soyadı" />
+        <span asp-validation-for="Musteri.Soyisim"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Musteri.Tel_no">Telefon Numarası :</label>
+        <input asp-for="Musteri.Tel_no" class="form-control" placeholder="(---)--- -- --)" />
+        <span asp-validation-for="Musteri.Tel_no"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Musteri.Adres">Adres :</label>
+        <input asp-for="Musteri.Adres" class="form-control" placeholder="Adres" />
+        <span asp-validation-for="Musteri.Adres"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Musteri.Ozel_not">Açıklama :</label>
+        <input asp-for="Musteri.Ozel_not" class="form-control" placeholder="Açıklama" />
+        <span asp-validation-for="Musteri.Ozel_not"></span>
+    </div>
+
+    <input type="submit" value="EKLE" class="btn btn-xs btn-success" />
+
+</form>
+

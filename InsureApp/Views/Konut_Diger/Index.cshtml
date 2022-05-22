@@ -1,0 +1,35 @@
+﻿@using InsureApp.Entities.Concrete
+@model InsureApp.Models.Konut_DigerListViewModel
+
+@{
+    ViewBag.Title = "Konut İşlemleri";
+    Layout = "~/Views/_AdminLayout.cshtml";
+}
+
+<h2>Konut Bilgileri Listesi</h2>
+
+<a class="btn btn-xs btn-success" asp-controller="Konut_Diger" asp-action="Add">Konut Bilgileri Ekle</a>
+<div>
+    <table class="table table-hover table-striped">
+        <tr>          
+            <td>Poliçe No</td>
+            <td>Adres</td>
+            <td></td>
+            <td></td>
+        </tr>
+        @foreach (var konutdiger in Model.Konut_Diger) 
+        {
+        <tr>
+            <td>@konutdiger.Police_no</td>
+            <td>@konutdiger.Adres</td>
+
+            <td><a class="btn btn-xs btn-info" asp-controller="Admin" asp-action="Update" asp-route-productId="@konutdiger.Konut_id">Update</a></td>
+            <td><a class="btn btn-xs btn-danger" asp-controller="Admin" asp-action="Delete" asp-route-productId="@konutdiger.Konut_id">Delete</a></td>
+        </tr>
+        }
+    </table>
+</div>
+
+
+
+

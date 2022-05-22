@@ -1,0 +1,39 @@
+﻿@using InsureApp.Entities.Concrete
+@using Microsoft.EntityFrameworkCore
+@model InsureApp.Models.MusteriListViewModel
+@{
+    ViewBag.Title = "Müşteri Listesi";
+    Layout = "~/Views/_AdminLayout.cshtml";
+}
+
+
+<td><a class="btn btn-xs btn-success" asp-controller="Admin" asp-action="Add">Yeni bir müşteri ekle</a></td>
+<div>
+    <table class="table table-hover table-striped" style="font-size:small ">
+        <tr>
+            <td>Tc No</td>
+            <td>Müşteri Adı</td>
+            <td>Müşteri Soyad</td>
+            <td>Telefon Numarası</td>
+            <td>Adres</td>
+            <td>Özel Not</td>
+            <td></td>
+        </tr>
+        @foreach (var musteri in Model.Musteri)
+        {
+            <tr>
+
+                <td>@musteri.Tc_No</td>
+                <td>@musteri.Isim</td>
+                <td>@musteri.Soyisim</td>
+                <td>@musteri.Tel_no</td>
+                <td>@musteri.Adres</td>
+                <td>@musteri.Ozel_not</td>
+                <td><a class="btn btn-xs btn-info" asp-controller="Admin" asp-action="Update" asp-route-musteriId="@musteri.Musteri_id">Güncelle</a></td>
+                @*<td><a class="btn btn-xs btn-danger" asp-controller="Admin" asp-action="Delete" asp-route-musteriId="@musteri.Musteri_id">Sil</a></td>*@
+            </tr>
+        }
+    </table>
+</div>
+
+

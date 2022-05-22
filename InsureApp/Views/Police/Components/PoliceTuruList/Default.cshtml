@@ -1,0 +1,13 @@
+﻿@model InsureApp.Models.PoliceTuruListViewModel
+
+<div class="list-group" style="font-size: medium">
+   @foreach(var item in Model.PoliceTuru)
+   {
+       var css = "list-group-item";
+       if (item.Policetur_id == Model.CurrentCategory)
+       {
+           css = "list-group-item active";
+       }
+       <a href="/police/index?policeturu=@item.Policetur_id" class="@css">@item.Police_turu</a>
+    }
+</div>

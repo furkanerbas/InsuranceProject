@@ -1,0 +1,53 @@
+﻿@using System.Threading.Tasks
+@using InsureApp.Models
+@model InsureApp.Models.MusteriUpdateViewModel
+
+@{
+    ViewBag.Title = "Araç Bilgileri Güncelleme";
+    Layout = "~/Views/_AdminLayout.cshtml";
+}
+
+<h2>Müşteri Güncelle</h2>
+
+<form asp-controller="Admin" asp-action="Update" method="post">
+    <div class="form-group">
+        <label asp-for="Musteri.Musteri_id"></label>
+        <input asp-for="Musteri.Musteri_id" class="form-control" placeholder="Musteri ID" />
+        <span asp-validation-for="Musteri.Musteri_id"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Musteri.Tc_No"></label>
+        <input asp-for="Musteri.Tc_No" class="form-control" placeholder="Tc No:" />
+        <span asp-validation-for="Musteri.Tc_No"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Musteri.Isim"></label>
+        <input asp-for="Musteri.Isim" class="form-control" placeholder="Adı" />
+        <span asp-validation-for="Musteri.Isim"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Musteri.Soyisim"></label>
+        <input asp-for="Musteri.Soyisim" class="form-control" placeholder="Soyadı" />
+        <span asp-validation-for="Musteri.Soyisim"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Musteri.Tel_no"></label>
+        <input asp-for="Musteri.Tel_no" class="form-control" placeholder="Telefon Numarası" />
+        <span asp-validation-for="Musteri.Tel_no"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Musteri.Adres"></label>
+        <input asp-for="Musteri.Adres" class="form-control" placeholder="Adres" />
+        <span asp-validation-for="Musteri.Adres"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Musteri.Ozel_not"></label>
+        <input asp-for="Musteri.Ozel_not" class="form-control" placeholder="Açıklama" />
+        <span asp-validation-for="Musteri.Ozel_not"></span>
+    </div>
+
+    <input type="hidden" asp-for="Musteri.Musteri_id"/>
+    <input type="submit" value="GÜNCELLE" class="btn btn-xs btn-success" />
+
+</form>
+

@@ -1,0 +1,40 @@
+﻿@using System.Threading.Tasks
+@using InsureApp.Models
+@model InsureApp.Models.OdemelerAddViewModel
+
+@{
+    ViewBag.Title = "Ödeme Tanımlama";
+    Layout = "~/Views/_AdminLayout.cshtml";
+}
+
+<h2>Yeni bir ödeme tanımla</h2>
+
+<form asp-controller="Odemeler" asp-action="Add" method="post">
+
+    <div class="form-group">
+        <label asp-for="Odemeler.Police_no">Poliçe No :</label>
+        <input asp-for="Odemeler.Police_no" class="form-control" placeholder="Poliçe No"/>
+        <span asp-validation-for="Odemeler.Police_no"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Odemeler.Musteri_id">Müşteri Ad Soyad :</label>
+        <select asp-for="Odemeler.Musteri_id" class="form-control h-100 font-weight-bold"
+                asp-items="@(new SelectList(Model.MusterilerList, "Musteri_id", "FullName"))"></select>
+        <span asp-validation-for="Odemeler.Musteri_id"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Odemeler.Odenen_tutar">Ödenen Tutar :</label>
+        <input asp-for="Odemeler.Odenen_tutar" class="form-control" placeholder="Ödenen Tutar" />
+        <span asp-validation-for="Odemeler.Odenen_tutar"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Odemeler.Odeme_tarihi">Ödeme Tarihi :</label>
+        <input asp-for="Odemeler.Odeme_tarihi" class="form-control" placeholder="Ödeme Tarihi" />
+        <span asp-validation-for="Odemeler.Odeme_tarihi"></span>
+    </div>
+
+    <input type="submit" value="EKLE" class="btn btn-xs btn-success" />
+
+</form>
+

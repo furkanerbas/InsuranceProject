@@ -1,0 +1,46 @@
+﻿@using System.Threading.Tasks
+@using InsureApp.Models
+@model InsureApp.Models.AracAddListViewModel
+
+@{
+    ViewBag.Title = "Araç Bilgileri Ekleme";
+    Layout = "~/Views/_AdminLayout.cshtml";
+}
+
+<h2>Araç Bilgileri Ekleme</h2>
+
+<form asp-controller="Arac" asp-action="Add" method="post">
+    
+   <div class="form-group">
+    <label asp-for="Arac.Police_no">Poliçe No :</label>
+    <select asp-for="Arac.Police_no" class="form-control h-100"
+            asp-items="@(new SelectList(Model.Police,"Police_no","Police_no"))"></select>
+    <span asp-validation-for="Arac.Police_no"></span>
+    </div>
+
+    @*<div class="form-group">
+        <label asp-for="Arac.Police_no">Poliçe No :</label>
+        <input asp-for="Arac.Police_no" class="form-control" placeholder="Poliçe No"/>
+        <span asp-validation-for="Arac.Police_no"></span>
+    </div>*@
+
+    <div class="form-group">
+        <label asp-for="Arac.Arac_turu">Araç Türü :</label>
+        <input asp-for="Arac.Arac_turu" class="form-control" placeholder="Araç Türü" />
+        <span asp-validation-for="Arac.Arac_turu"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Arac.Plaka">Araç Plaka :</label>
+        <input asp-for="Arac.Plaka" class="form-control" placeholder="Araç Plaka" />
+        <span asp-validation-for="Arac.Plaka"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Arac.Ruhsat_no">Araç Ruhsat :</label>
+        <input asp-for="Arac.Ruhsat_no" class="form-control" placeholder="Araç Ruhsat" />
+        <span asp-validation-for="Arac.Ruhsat_no"></span>
+    </div>
+
+    <input type="submit" value="EKLE" class="btn btn-xs btn-success" />
+
+</form>
+

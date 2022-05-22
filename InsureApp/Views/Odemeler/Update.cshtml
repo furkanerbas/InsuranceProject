@@ -1,0 +1,28 @@
+﻿@using System.Threading.Tasks
+@using InsureApp.Models
+@model InsureApp.Models.OdemelerUpdateViewModel
+
+@{
+    ViewBag.Title = "Müşteri Güncelleme";
+    Layout = "~/Views/_AdminLayout.cshtml";
+}
+
+<h2>Ödeme Güncelle</h2>
+
+<form asp-controller="Odemeler" asp-action="Update" method="post">
+
+    <div class="form-group">
+        <label asp-for="Odemeler.Odenen_tutar">Ödenen Tutar :</label>
+        <input asp-for="Odemeler.Odenen_tutar" class="form-control" placeholder="Ödenen Tutar"/>
+        <span asp-validation-for="Odemeler.Odenen_tutar"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Odemeler.Odeme_tarihi">Ödeme Tarihi :</label>
+        <input asp-for="Odemeler.Odeme_tarihi" class="form-control" placeholder="Ödeme Tarihi"/>
+        <span asp-validation-for="Odemeler.Odeme_tarihi"></span>
+    </div>
+
+    <input type="submit" value="GÜNCELLE" class="btn btn-xs btn-success"/>
+
+</form>
+

@@ -1,0 +1,70 @@
+﻿@using System.Threading.Tasks
+@using InsureApp.Business.Concrate
+@using InsureApp.DataAccess.Concrate.EntityFramework
+@using InsureApp.Entities.Concrete
+@using Microsoft.Ajax.Utilities
+@using FormMethod = Microsoft.AspNetCore.Mvc.Rendering.FormMethod
+
+@model InsureApp.Models.CariListViewModel
+
+<div class="btn">
+    @{Html.BeginForm("ExportToPDF", "Cari", FormMethod.Post);
+    {
+        <input type="submit" class="Button" value="PDF olarak kaydet" />
+
+    }}
+</div>
+
+@functions
+{
+    public int borc { get; set; }
+    public int alacak { get; set; }
+
+}
+
+@{
+    ViewBag.Title = "Cari İşlemleri";
+    Layout = "~/Views/_AdminLayout.cshtml";
+}
+
+<div>
+    <table class="table table-hover table-striped" style="font-size:small">
+        <tr>
+            <td>Poliçe No</td>
+            <td>Musteri Adı</td>
+            <td>Ödeme Tarihi</td>
+            <td>Borç</td>
+            <td>Alacak</td>
+
+            <td></td>
+            <td></td>
+        </tr>
+        @foreach (var odemeler in Model.Odemeler)
+        {
+            borc = odemeler.SigortaBedeli - odemeler.Odenen_tutar;
+            alacak = odemeler.Odenen_tutar - odemeler.SigortaBedeli;
+
+            if (odemeler.Odenen_tutar > odemeler.SigortaBedeli)
+            {
+                borc = 0;
+                alacak = odemeler.Odenen_tutar - odemeler.SigortaBedeli;
+            }
+            else
+            {
+                borc = odemeler.SigortaBedeli - odemeler.Odenen_tutar;
+            }
+
+            <tr>
+                <td>@odemeler.Police_no</td>
+                <td>@odemeler.FullName</td>
+                <td>@odemeler.Odeme_tarihi</td>
+                <td>@borc</td>
+                <td>@alacak</td>
+
+
+                <td><a class="btn btn-xs btn-info" asp-controller="Odemeler" asp-action="Update" asp-route-odeme_id="@odemeler.Odeme_id">GÜNCELLE</a></td>
+                <td><a class="btn btn-xs btn-danger" asp-controller="Odemeler" asp-action="Delete" asp-route-odeme_id="@odemeler.Odeme_id">SİL</a></td>
+            </tr>
+        }
+    </table>
+</div>

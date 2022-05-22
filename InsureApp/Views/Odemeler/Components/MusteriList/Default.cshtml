@@ -1,0 +1,13 @@
+﻿@model InsureApp.Models.MusteriListViewModel
+
+<div class="list-group">
+   @foreach(var item in Model.Musteri)
+   {
+       var css = "list-group-item";
+       if (item.Musteri_id == Model.CurrentCategory)
+       {
+           css = "list-group-item active";
+       }
+       <a href="/police/index?policeturu=@item.Musteri_id" class="@css">@item.Isim</a>
+    }
+</div>

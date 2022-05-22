@@ -1,0 +1,2 @@
+Bootstrap kütüphanesi internet üzerinden çalýþmaktadýr.
+Programýn tasarýmýnýn düzgün bir biçimde gelmesi için internete baðlý olmalýdýr.

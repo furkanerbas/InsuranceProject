@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsureApp", "InsureApp\InsureApp.csproj", "{481E187A-3714-495A-87AB-BB5810749550}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsureApp.DataAccess", "InsureApp.DataAccess\InsureApp.DataAccess.csproj", "{3DA454BF-894C-4566-961A-C32FEC3C6B3E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsureApp.Entities", "InsureApp.Entities\InsureApp.Entities.csproj", "{4C8C7B96-5AB7-4FD4-B474-CA971FE2C19A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsureApp.Business", "InsureApp.Business\InsureApp.Business.csproj", "{1DEFD5BE-8522-4157-905E-4E329413CB24}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsureApp.Core", "InsureApp.Core\InsureApp.Core.csproj", "{2F7EAFAE-EBE3-4538-829D-8241821ECC11}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{481E187A-3714-495A-87AB-BB5810749550}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{481E187A-3714-495A-87AB-BB5810749550}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{481E187A-3714-495A-87AB-BB5810749550}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{481E187A-3714-495A-87AB-BB5810749550}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DA454BF-894C-4566-961A-C32FEC3C6B3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DA454BF-894C-4566-961A-C32FEC3C6B3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DA454BF-894C-4566-961A-C32FEC3C6B3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DA454BF-894C-4566-961A-C32FEC3C6B3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C8C7B96-5AB7-4FD4-B474-CA971FE2C19A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C8C7B96-5AB7-4FD4-B474-CA971FE2C19A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C8C7B96-5AB7-4FD4-B474-CA971FE2C19A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C8C7B96-5AB7-4FD4-B474-CA971FE2C19A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DEFD5BE-8522-4157-905E-4E329413CB24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DEFD5BE-8522-4157-905E-4E329413CB24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DEFD5BE-8522-4157-905E-4E329413CB24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DEFD5BE-8522-4157-905E-4E329413CB24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F7EAFAE-EBE3-4538-829D-8241821ECC11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F7EAFAE-EBE3-4538-829D-8241821ECC11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F7EAFAE-EBE3-4538-829D-8241821ECC11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F7EAFAE-EBE3-4538-829D-8241821ECC11}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A8A3241-D727-4519-83AC-83E4A8DE5ABF}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/ozer02
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = InsureApp\\InsureApp.csproj
+		SccProjectName1 = InsureApp
+		SccLocalPath1 = InsureApp
+		SccProjectUniqueName2 = InsureApp.DataAccess\\InsureApp.DataAccess.csproj
+		SccProjectName2 = InsureApp.DataAccess
+		SccLocalPath2 = InsureApp.DataAccess
+		SccProjectUniqueName3 = InsureApp.Entities\\InsureApp.Entities.csproj
+		SccProjectName3 = InsureApp.Entities
+		SccLocalPath3 = InsureApp.Entities
+		SccProjectUniqueName4 = InsureApp.Business\\InsureApp.Business.csproj
+		SccProjectName4 = InsureApp.Business
+		SccLocalPath4 = InsureApp.Business
+		SccProjectUniqueName5 = InsureApp.Core\\InsureApp.Core.csproj
+		SccProjectName5 = InsureApp.Core
+		SccLocalPath5 = InsureApp.Core
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,65 @@
+﻿@using InsureApp.Business.Concrate
+@using InsureApp.DataAccess.Concrate.EntityFramework
+@using InsureApp.Entities.Concrete
+@using Microsoft.Ajax.Utilities
+@model InsureApp.Models.PoliceListViewModel
+
+@functions {
+public int Toplam { get; set; }
+}
+
+@{
+    ViewBag.Title = "Police İşlemleri";
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+
+<a class="btn btn-xs btn-success" asp-controller="Police" asp-action="Add">Yeni Poliçe Ekle</a>
+<a class="btn btn-xs btn-success" asp-controller="Konut_Diger" asp-action="Add">Konut Bilgileri Ekle</a>
+<a class="btn btn-xs btn-success" asp-controller="Konut_Diger" asp-action="Index">Konut Bilgilerini Listele</a>
+<a class="btn btn-xs btn-success" asp-controller="Arac" asp-action="Add">Araç Bilgileri Ekle</a>
+<a class="btn btn-xs btn-success" asp-controller="Arac" asp-action="Index">Araç Bilgilerini Listele</a>
+
+<div>
+    <table class="table table-hover table-striped" style="font-size:small">
+        <tr>
+            <td>Adı Soyadı</td>
+            <td>Poliçe No</td>
+            <td>Poliçe Türü</td>
+            <td>Başlangıç Tarihi</td>
+            <td>Bitiş Tarihi</td>
+            <td>Vize Tarihi</td>
+            <td>Sigorta Bedeli</td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        @foreach (var police in Model.Police)
+        {
+            Toplam += police.Sigorta_bedeli;
+            
+            <tr>
+                <td>@police.FullName</td>
+                <td>@police.Police_no</td>
+                <td>@police.PoliceTuru</td>
+                <td>@police.Baslangic_tarihi.ToShortDateString()</td>
+                <td>@police.Bitis_tarihi.ToShortDateString()</td>
+                <td>@police.Vize_tarihi.ToShortDateString()</td>
+                <td>@police.Sigorta_bedeli</td>
+                <td><a class="btn btn-xs btn-info" asp-controller="Police" asp-action="Update" asp-route-Police_no="@police.Police_no">GÜNCELLE</a></td>
+                <td><a class="btn btn-xs btn-danger" asp-controller="Police" asp-action="Delete" asp-route-Police_no="@police.Police_no">SİL</a></td>
+            </tr>
+        }
+
+    </table>
+    <div style="font-size: large" align="center">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Toplam Sigorta Bedeli :&nbsp @Toplam.ToString()
+    </div>
+</div>
+<police-list-pager current-police="@Model.CurrentCategory"
+                   current-page="@Model.CurrentPage"
+                   page-count="@Model.PageCount"
+                   page-size="@Model.PageSize"></police-list-pager>
+
+
+

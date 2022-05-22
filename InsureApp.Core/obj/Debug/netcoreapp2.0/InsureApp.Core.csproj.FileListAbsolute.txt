@@ -1,0 +1,9 @@
+C:\Users\ÖZER\source\repos\InsureApp\InsureApp.Core\bin\Debug\netcoreapp2.0\InsureApp.Core.deps.json
+C:\Users\ÖZER\source\repos\InsureApp\InsureApp.Core\bin\Debug\netcoreapp2.0\InsureApp.Core.dll
+C:\Users\ÖZER\source\repos\InsureApp\InsureApp.Core\bin\Debug\netcoreapp2.0\InsureApp.Core.pdb
+C:\Users\ÖZER\source\repos\InsureApp\InsureApp.Core\obj\Debug\netcoreapp2.0\InsureApp.Core.csproj.CoreCompileInputs.cache
+C:\Users\ÖZER\source\repos\InsureApp\InsureApp.Core\obj\Debug\netcoreapp2.0\InsureApp.Core.AssemblyInfoInputs.cache
+C:\Users\ÖZER\source\repos\InsureApp\InsureApp.Core\obj\Debug\netcoreapp2.0\InsureApp.Core.AssemblyInfo.cs
+C:\Users\ÖZER\source\repos\InsureApp\InsureApp.Core\obj\Debug\netcoreapp2.0\InsureApp.Core.dll
+C:\Users\ÖZER\source\repos\InsureApp\InsureApp.Core\obj\Debug\netcoreapp2.0\InsureApp.Core.pdb
+C:\Users\ÖZER\source\repos\InsureApp\InsureApp.Core\obj\Debug\netcoreapp2.0\InsureApp.Core.csprojAssemblyReference.cache
